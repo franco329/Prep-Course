@@ -7,7 +7,11 @@ function obtenerMayor(x, y) {
   // Tu código:
   if (x > y) {
     return x;
-  } return y;
+  }else if (y > x){
+     return y;
+  } else {
+    return x || y;
+  }
 }
 
 function mayoriaDeEdad(edad) {
@@ -16,7 +20,9 @@ function mayoriaDeEdad(edad) {
   //Si es menor, devolver --> "Not allowed"
   if (edad >= 18) {
     return 'Allowed';
-  } return 'Not allowed';
+  } else if (edad < 18) {
+    return 'Not allowed';
+}
 }
   
 function conection(status) {
@@ -27,9 +33,11 @@ function conection(status) {
   //Devolver el estado de conexión de usuario en cada uno de los casos.
   if (status === 1) {
     return 'Online';
-  } if (status === 2) {
+  } else if (status === 2) {
     return 'Away';
-  } return 'Offline';
+  } else {
+    return 'Offline';
+}
 }
 
 function saludo(idioma) {
@@ -41,11 +49,13 @@ function saludo(idioma) {
   // Tu código:
   if (idioma === 'aleman') {
     return 'Guten Tag!';
-  } if (idioma === 'mandarin') {
+  } else if (idioma === 'mandarin') {
     return 'Ni Hao!';
-  } if (idioma === 'ingles') {
+  } else if (idioma === 'ingles') {
     return 'Hello!';
-  } return 'Hola!';
+  }else {
+    return 'Hola!';
+}
 }
 
 function colors(color) {
@@ -58,15 +68,15 @@ function colors(color) {
   //Usar el statement Switch.
   switch (color) {
     case 'blue':
-      return ('This is blue');
+      return 'This is blue';
     case 'red':
-      return ('This is red');
+      return 'This is red';
     case 'green':
-      return ('This is green');
+      return 'This is green';
     case 'orange':
-      return ('This is orange');
+      return 'This is orange';
     default:
-      return ('Color not found');
+      return 'Color not found';
   }
 }
 
@@ -76,7 +86,9 @@ function esDiezOCinco(numero) {
   // Tu código:
   if (numero === 10 || numero === 5) {
     return true;
-  } return false;
+  } else {
+    return false;
+}
 }
 
 function estaEnRango(numero) {
@@ -85,7 +97,9 @@ function estaEnRango(numero) {
   // Tu código:
   if (numero < 50 && numero > 20) {
     return true;
-  } return false;
+  } else {
+    return false;
+}
 }
 
 function esEntero(numero) {
@@ -96,9 +110,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (numero % 1 === 0) {
+  if (numero === Math.floor(numero)){
     return true;
-  } return false
+  }else {
+    return false;
+  }
 }
 
 function fizzBuzz(numero) {
@@ -128,14 +144,15 @@ function operadoresLogicos(num1, num2, num3) {
   else if (num1 === 0 || num2 === 0 || num3 === 0) {
     return 'Error';
   } 
-  else if (num1 > 0 && num1 > num2 && num1 > num3) {
+  else if (num1 > num2 && num1 > num3) {
     return 'Número 1 es mayor y positivo';
   } 
   else if (num3 > num1 && num3 > num2) {
-    return ++num3
+    return ++num3;
   } 
   else {
-    return false};
+    return false;
+  }
 }
   
 function esPrimo(numero) {
@@ -158,7 +175,9 @@ function esVerdadero(valor){
   //Escribe tu código aquí
 if (valor === true) {
   return 'Soy verdadero';
-} return 'Soy falso';
+} else if (valor === false) {
+  return 'Soy falso';
+}
 }
 
 function tablaDelSeis(){
@@ -166,9 +185,10 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí
   var tabla = []   
-  for (i = 0; i < 11; i++) {
+  for (var i = 0; i < 11; i++) {
     tabla.push (6 * i);
-  } return tabla;
+  } 
+  return tabla;
 }
 
 function tieneTresDigitos(numero){

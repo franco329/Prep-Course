@@ -28,7 +28,7 @@ function incrementarPorUno(array) {
   // Tu código:
   var nuevoArray = [];
   for (var i = 0; i < array.length; i++) {
-    nuevoArray [i] = array [i] + 1;
+    nuevoArray[i] = array[i] + 1;
   } return nuevoArray;
 }
 
@@ -80,8 +80,8 @@ function agregarNumeros(numeros) {
   // Tu código:
   var sum = 0;
   for (i = 0; i < numeros.length; i++) {
-    sum = sum + numeros [i]
-  } return sum
+    sum = sum + numeros[i];
+  } return sum;
 }
 
 
